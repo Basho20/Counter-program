@@ -1,15 +1,23 @@
+// COUNTER PROGRAM
 
-let username;
+const decreaseBtn = document.getElementById("decrease");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increase");
+const countLabel = document.getElementById("countlabel");
+let count = 0;
 
-
-
-document.getElementById("mySubmit").onclick = function() {
-    username = document.getElementById("myText").value;
-    console.log(username);
-    document.getElementById("myH1").textContent = `Hello ${username}`
+increaseBtn.onclick = function() {
+    count++;
+    countLabel.textContent = count;
 }
 
-/* 
-THE MOST BASIC WAY TO GET USER INPUT PROFESSIONALLY IS THROUGH THE PROMPT() FUNCTION. IT DISPLAYS A DIALOG BOX THAT PROMPTS THE USER FOR INPUT AND RETURNS THE INPUT AS A STRING.
-*/
 
+decreaseBtn.onclick = function() {
+    count--;
+    countLabel.textContent = count;
+}
+
+resetBtn.onclick = function() {
+    count = 0;
+    countLabel.textContent = count;
+}
